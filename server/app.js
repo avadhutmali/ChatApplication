@@ -67,14 +67,14 @@ io.on("connection", async (socket) => {
   //Register
   socket.on("register",(username)=>{
     user[username] = socket.id;
-    // console.log(`User ${username} connected with socket ID: ${socket.id}`);
+    console.log(`User ${username} connected with socket ID: ${socket.id}`);
   })
 
   //sending private message
   socket.on("private_message",({to,data})=>{
     const recipitentSocketId = user[to]
     if(recipitentSocketId){
-      // console.log(`User ${to} connected socket ID: sender: ${socket.id}  recipitant:  ${recipitentSocketId} with msg ${data.message  }`);
+      console.log(`User ${to} connected socket ID: sender: ${socket.id}  recipitant:  ${recipitentSocketId} with msg ${data.message  }`);
       io.to(recipitentSocketId).emit("private_message",{
         from : Object.keys(user).find(key=>user[key]===socket.id),
         message:data.message

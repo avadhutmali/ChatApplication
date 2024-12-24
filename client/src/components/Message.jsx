@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {io} from 'socket.io-client'
 import Cookies from "js-cookie"
 import { Navigate } from 'react-router'
-const socket = io("http://localhost:3003",{transports: ['websocket'],})
+// const socket = io("http://localhost:3003",{transports: ['websocket'],})
 
 function Message() {
     const [authenticated,setAuthenticated] = useState(false)

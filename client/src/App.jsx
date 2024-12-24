@@ -12,15 +12,15 @@ function App() {
 
   return (
     <div className='h-screen overflow-hidden'>
-    {/* <Navbar/>
-    <Page/> */}
-    <Routes>
+    <Navbar/>
+    <Page/>
+    {/* <Routes>
       <Route path='/' element={Cookies.token ? <Navigate to="/chat" /> : <Navigate to="/login" />} />
       <Route path='/signup' element={<Signup  />} />
       <Route path='/login' element={<Login  />} />
       <Route path='/chat' element={<Message />} />
       <Route path='*' element={<h1>404 - Page Not Found</h1>} />
-    </Routes>
+    </Routes> */}
     </div>
   );
 }

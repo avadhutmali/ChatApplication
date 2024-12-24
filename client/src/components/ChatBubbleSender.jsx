@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-const ChatBubble = ({ name, time, message, status, profileImage }) => {
+const ChatBubbleSender = ({ name, time, message, status, profileImage }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -24,7 +24,7 @@ const ChatBubble = ({ name, time, message, status, profileImage }) => {
   return (
     <div className="flex items-start gap-2.5 m-4 cursor-pointer">
       {/* Message Content */}
-      <div className="flex flex-col w-full max-w-[320px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-700">
+      <div className="flex absolute right-9 flex-col w-full max-w-[320px] leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-ee-xl rounded-s-xl dark:bg-gray-700">
         <div className="flex items-center space-x-2 rtl:space-x-reverse">
           <span className="text-sm font-semibold text-gray-900 dark:text-white">
             {name}
@@ -41,4 +41,4 @@ const ChatBubble = ({ name, time, message, status, profileImage }) => {
   );
 };
 
-export default ChatBubble;
+export default ChatBubbleSender;
