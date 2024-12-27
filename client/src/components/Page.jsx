@@ -78,7 +78,7 @@ function Page() {
   return (
     <div className="flex gap-2 h-screen w-full">
       <div className="contacts w-[85vh] p-2 bg-red-100 h-full overflow-scroll">
-        <input className="h-10 w-full bg-red-300 p-2 font-bold text-xl my-2" onChange={(e)=>{setReceiver(e.target.value)}}/>
+        <input className="h-10 w-full bg-red-300 p-2 font-bold text-xl my-2" onChange={(e)=>{setReceiver(e.target.valuew)}}/>
         <button className='w-full bg-blue-600 h-8 rounded-lg text-white'>Set</button>
       </div>
       <div className="chat-area w-full bg-blue-100 h-full overflow-scroll relative">
